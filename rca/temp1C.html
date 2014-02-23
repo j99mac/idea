@@ -20,8 +20,49 @@
   <h1 class="site-title"><?php bloginfo( 'name' ); ?></h1>
 </div>
      <div class="container">
+  <!-- Carousel
+    ================================================== -->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item active">
+          <img src="img/photo2.jpg" idth="100%" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Text</h1>
+              <p>Text</p>
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Button</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/photo3.jpg" idth="100%" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+             <h1>Text</h1>
+              <p>Text</p>
+            </div>
+          </div>
+        </div>
+        <div class="item">
+          <img src="img/photo4.jpg" idth="100%" alt="First slide">
+          <div class="container">
+            <div class="carousel-caption">
+               <h1>Text</h1>
+              <p>Text</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a>
+    </div><!-- /.carousel -->
     <div id="sb-site">
-        <img src="img/photo1.jpg" alt="Image1" width="100%" height="" class="img-center">
         <div class="site-width">     
         <h3><a name="Who"></a>Who</h3>
         <p>Text</p>
@@ -82,6 +123,8 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="js/slidebars.min.js"></script>
 <script src="js/slidebars-theme.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/docs.min.js"></script>
 <script>
 			(function($) {
 				$(document).ready(function() {
