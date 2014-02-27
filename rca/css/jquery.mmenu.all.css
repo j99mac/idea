@@ -16,6 +16,8 @@ html.mm-opened .mm-menu.mm-horizontal > .mm-panel {
   -ms-transition-property: top, right, bottom, left, border;
   -o-transition-property: top, right, bottom, left, border;
   transition-property: top, right, bottom, left, border; }
+  background-image: url(img/bg2.jpg);
+
 html.mm-opened .mm-page,
 html.mm-opened #mm-blocker {
   left: 0%;
