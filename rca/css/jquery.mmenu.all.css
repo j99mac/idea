@@ -37,8 +37,7 @@ html.mm-opened.mm-opening #mm-blocker {
   left: 0; }
 
 .mm-fixed-top {
-  top: 0; }
-
+  top: 0; ba
 .mm-fixed-bottom {
   bottom: 0; }
 
@@ -48,7 +47,7 @@ html.mm-opened .mm-page,
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
   -o-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;}
 
 html.mm-opened,
 html.mm-opened body {
@@ -102,11 +101,7 @@ html.mm-blocking #mm-blocker {
     padding: 20px;
     position: absolute;
     top: 0;
-    left: 100%;
-    z-index: 0; }
-    .mm-menu > .mm-panel.mm-opened {
-      left: 0%; }
-    .mm-menu > .mm-panel.mm-subopened {
+    left: 100%;}
       left: -40%; }
     .mm-menu > .mm-panel.mm-highest {
       z-index: 1; }
@@ -259,7 +254,9 @@ html.mm-opened .mm-page {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); }
 
 .mm-ismenu {
-  background: #333333; }
+  background-image: url(img/bg2.jpg);
+  background-repeat: repeat;
+   }
 
 .mm-menu {
   color: rgba(255, 255, 255, 0.6); }
