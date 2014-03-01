@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="content-type" content="text/html;charset=iso-8859-1" />
+		<meta name="author" content="www.frebsite.nl" />
+		<meta name="viewport" content="width=device-width initial-scale=1.0 maximum-scale=1.0 user-scalable=yes" />
+
+		<title>jQuery.mmenu - Examples</title>
+
+		<link type="text/css" rel="stylesheet" href="demo.css" />
+		<link type="text/css" rel="stylesheet" href="css/jquery.mmenu.all.css" />
+        <link type="text/css" rel="stylesheet" href="css/jquery.mmenu.themes.css" />
+		<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+   		<link type="text/css" rel="stylesheet" href="css/style.css" />
+		<!-- for the one page -->
+		<style type="text/css">
+			#intro,
+			#first,
+			#second,
+			#third
+			{
+				height: 400px;
+			}
+			#intro
+			{
+				padding-top: 40px;
+			}
+			#first,
+			#second,
+			#third
+			{
+				border-top: 1px solid #ccc;
+				padding-top: 60px;
+			}
+		</style>
+		
+		<!-- for the fixed header -->
+		<style type="text/css">
+			#header,
+			#footer
+			{
+				position: fixed;
+				width: 100%;
+				-webkit-box-sizing: border-box;
+				-moz-box-sizing: border-box;
+				-ms-box-sizing: border-box;
+				-o-box-sizing: border-box;
+				box-sizing: border-box;
+			}
+		</style>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.mmenu.js"></script>
+   		<script type="text/javascript" src="js/bootstrap.js"></script>       
+        <script type="text/javascript">
+			$(function() {
+				var $menu = $('nav#menu'),
+					$html = $('html, body');
+
+				$menu.mmenu();
+				$menu.find( 'li > a' ).on(
+					'click',
+					function()
+					{
+						var href = $(this).attr( 'href' );
+
+						//	if the clicked link is linked to an anchor, scroll the page to that anchor 
+						if ( href.slice( 0, 1 ) == '#' )
+						{
+							$menu.one(
+								'closed.mm',
+								function()
+								{
+									setTimeout(
+										function()
+										{
+											$html.animate({
+												scrollTop: $( href ).offset().top
+											});	
+										}, 10
+									);	
+								}
+							);						
+						}
+					}
+				);
+			});
+		</script>
+	</head>
+<body>
+<div id="page">
+  <div id="header" class="mm-fixed-top"> <a href="#menu"></a> Robert Curtis Architects </div>
+  <div id="content">
+    <div id="Who">
+      <p><strong>Who</strong><br />
+      <div class="row">
+        <div class="col-md-7"><img alt="Image1" class="img-center" height= "" src="img/photo1.jpg" width="100%"></div>
+        <div class="col-md-5">
+          <p><strong>Who</strong><br />
+          <p>Text</p>
+          <p>Text</p>
+          <p>Text</p>
+          <a class="btn btn btn-default" href= "http://olcurtis.github.io/rca/">Unfolding</a> </div>
+      </div>
+      <div class="row"> </div>
+      <div id="What">
+        <p><strong>What</strong><br />
+        <div class="row">
+          <div class="col-md-4"> <img alt="Image1" class="img-center" height="" src= "img/photo2.jpg" width="100%">
+            <h4>Title</h4>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus in odio eget risus tincidunt euismod at ut neque. Ut ut erat orci. Ut</p>
+          </div>
+          <div class="col-md-4"> <img alt="Image1" class="img-center" height="" src= "img/photo3.jpg" width="100%">
+            <h4>Title</h4>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus in odio eget risus tincidunt euismod at ut neque. Ut ut erat orci. Ut</p>
+          </div>
+          <div class="col-md-4"> <img alt="Image1" class="img-center" height="" src= "img/photo4.jpg" width="100%">
+            <h4>Title</h4>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus in odio eget risus tincidunt euismod at ut neque. Ut ut erat orci. Ut</p>
+          </div>
+        </div>
+        <img alt="Image1" class="img-center" height="" src="img/video.jpg" width="100%"> </div>
+      <div id="Why">
+        <div class="col-md-5">
+          <p><strong>Why</strong><br />
+          <p>Nam felis sapien, porttitor volutpat nunc nec, scelerisque molestie erat. Cras et pellentesque neque. Aliquam et sodales libero. Sed tempus odio a convallis facilisis. Sed vulputate imperdiet sem, vel pharetra augue posuere id. Vivamus molestie justo nisl, vitae scelerisque arcu consequat ac. Vivamus vestibulum augue quam, eu aliquet mi placerat auctor. Suspendisse dignissim, nisi tristique pellentesque commodo, leo nisl pellentesque erat, dignissim convallis nunc urna in sem. Sed vel sem non massa vehicula aliquam quis eget eros. Suspendisse non nisl venenatis, aliquam turpis in, dapibus libero. Quisque molestie, enim vitae sagittis feugiat, eros erat hendrerit purus, in aliquet nisl lorem eget felis. Pellentesque sollicitudin libero eu tellus commodo, eu volutpat sapien rutrum.</p>
+        </div>
+        <div class="col-md-7"><img alt="Image1" class="img-center" height= "" src="img/photo5.jpg" width="100%"></div>
+        <div id="How">
+          <div class="row">
+            <div class="col-md-7"><img alt="Image1" class="img-center" height= "" src="img/photo5.jpg" width="100%"></div>
+            <div class="col-md-5">
+              <p><strong>How</strong><br />
+              <p>Duis gravida enim et nulla gravida, in convallis ligula blandit. Integer pellentesque sit amet est at tempus. Pellentesque placerat tellus ut ipsum porttitor, id tincidunt nisi vehicula. Pellentesque vel nisl lorem. Duis tempus nisi quam, sed placerat orci tempus sed. Nunc pellentesque facilisis urna, quis vestibulum dui cursus eu. Nullam non semper nisi. Nulla accumsan interdum eros, vel vehicula sapien condimentum eget. Pellentesque dictum imperdiet felis a dapibus. Suspendisse potenti. Ut non aliquet risus. Curabitur metus arcu, dapibus sit amet sagittis tristique, scelerisque sit amet erat. Nullam non placerat odio. Donec consequat pretium lacinia. Vestibulum a dui ac turpis euismod rhoncus vitae quis orci.</p>
+              <p>Text</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="footer" class="mm-fixed-bottom">
+  <p> &copy; 2014 RCA  Smart, sustainable spaces  <a href="#">Back to top</a></p>
+  </div>
+  <nav id="menu">
+    <ul>
+      <li class="Selected">
+      <li><a href="#Who">Who</a></li>
+      <li><a href="#What">What</a></li>
+      <li><a href="#Why">Why</a></li>
+      <li><a href="#How">How</a></li>
+    </ul>
+    </li>
+    </ul>
+  </nav>
+</div>
+</body>
+</html>
